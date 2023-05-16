@@ -563,7 +563,7 @@ footer > .logo {
     gap: 30px;
     flex-wrap: wrap;
 }
-.project-item {
+.project__item {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--filter-border);

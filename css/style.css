@@ -51,11 +51,11 @@ h2 {
     color: var(--primary-color);
 }
 
-.studio-black {
+.studio--black {
     color: black;
 }
 
-.studio-white {
+.studio--white {
     color: white;
 }
 
@@ -67,24 +67,24 @@ h2 {
     padding: 24px 0 25px;
 }
 
-.header-wrapper {
+.page-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.header-nav {
+.nav {
     display: flex;
     align-items: center;
     gap: 93px;
 }
 
-.header-menu {
+.nav__menu {
     display: flex;
     gap: 46px;
 }
 
-.header-menu-item {
+.nav__item {
     text-decoration: none;
     color: var(--main-font-color);
     font-weight: 500;
@@ -95,7 +95,7 @@ h2 {
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-menu-item :hover::after {
+.nav__item :hover::after {
     content: '';
     align-items: center;
     display: inline-block;
@@ -106,7 +106,7 @@ h2 {
     left: 0%;
     border-bottom: solid 4px #2196f3;
 }
-.header-underline::after {
+.nav--underline::after {
     content: '';
     display: inline-block;
     width: 100%;
@@ -115,11 +115,11 @@ h2 {
     position: absolute;
     border-bottom: solid 4px #2196f3;
 }
-.header-underline {
+.nav--underline {
     color: var(--primary-color);
     position: relative;
 }
-.header-contacts {
+.contacts {
     display: flex;
     gap: 30px;
     margin-right: 12px;
@@ -127,7 +127,7 @@ h2 {
     align-items: center;
 }
 
-.header-contacts-item {
+.contacts__link {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -142,22 +142,22 @@ h2 {
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-contact {
+.contact__icon {
     display: flex;
     width: 16px;
     height: 14px;
 }
 
-.icon-smartphone {
+.icon--smartphone {
     width: 10px;
     height: 16px;
 }
-.header-menu-item:is(:hover, :focus),
-.header-contacts-item:is(:hover, :focus) {
+.nav__item:is(:hover, :focus),
+.contacts__link:is(:hover, :focus) {
     color: var(--primary-color);
 }
 
-.header-contacts-item:is(:hover, :focus) > .icon-contact > {
+.contacts__link:is(:hover, :focus) > .contact__icon > {
     fill: var(--primary-color);
 }
 /* HEADER */
@@ -388,7 +388,7 @@ h2 {
     color: white;
 }
 
-.footer-flex {
+.page-footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -397,12 +397,12 @@ footer > .logo {
     display: flex;
     flex-direction: column;
 }
-.footer-address-wrapper {
+.address {
     margin-top: 20px;
     font-style: normal;
 }
 
-.footer-address {
+.address__txt {
     display: flex;
     flex-direction: column;
     font-size: 14px;
@@ -410,7 +410,7 @@ footer > .logo {
     letter-spacing: 0.03em;
 }
 
-.footer-contact {
+.adress__link {
     margin-top: 9px;
     width: fit-content;
     display: flex;
@@ -421,7 +421,7 @@ footer > .logo {
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-.footer-contact:is(:hover, :focus) {
+.adress__link:is(:hover, :focus) {
     color: var(--primary-color);
     opacity: 1;
 }
@@ -433,18 +433,18 @@ footer > .logo {
     flex-direction: column;
     gap: 20px;
 }
-.join-us-flex {
+.join-us__box {
     display: flex;
     gap: 10px;
 }
-.join-us-text {
+.join-us__title {
     display: flex;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
 }
-.join-us-link {
+.join-us__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -454,13 +454,13 @@ footer > .logo {
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.join-us-icon {
+.join-us__icon {
     fill: white;
     padding: 12px;
     width: 20px;
     height: 20px;
 }
-.join-us-link:is(:hover, :focus) {
+.join-us__link:is(:hover, :focus) {
     background: var(--primary-color);
 }
 .sign-up {
@@ -469,13 +469,13 @@ footer > .logo {
     margin-bottom: 30px;
 }
 
-.sign-up-label {
+.sign-up__label {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
 }
-.sign-up-input {
+.sign-up__input {
     display: block;
     margin-top: 20px;
     padding-left: 16px;
@@ -494,11 +494,11 @@ footer > .logo {
     display: block;
     margin-left: 12px;
 }
-.sign-up-input::placeholder {
+.sign-up__input::placeholder {
     font-size: 16px;
     line-height: 1.25;
 }
-.sign-up-btn {
+.footer-btn__button {
     display: flex;
     align-items: center;
     margin-bottom: 33px;
@@ -517,7 +517,7 @@ footer > .logo {
     border: none;
     cursor: pointer;
 }
-.sign-up-icon {
+.footer-btn__icon {
     display: flex;
     width: 24px;
     height: 24px;
@@ -567,11 +567,6 @@ footer > .logo {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--filter-border);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    flex-direction: column;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -579,18 +574,18 @@ footer > .logo {
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-card {
+.card {
     position: relative;
     overflow: hidden;
 }
 
-.card-overlay {
+.card__overlay {
     position: relative;
     width: 370px;
     height: 294px;
     overflow: hidden;
 }
-.card-animation {
+.card__animation {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -598,21 +593,19 @@ footer > .logo {
     height: 100%;
     background-color: var(--primary-color);
     transform: translateY(200%);
-    transition: -webkit-transform 500ms ease;
     transition: transform 500ms ease;
-    transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
-.project-item:is(:hover, :focus) .card-animation {
+.project__item:is(:hover, :focus) .card__animation {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translatex(0);
 }
-.card-animation:is(:hover, :focus) {
+.card__animation:is(:hover, :focus) {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translatex(0);
 }
-.card-description {
+.card__description {
     font-size: 18px;
     color: white;
     line-height: 1.55;
@@ -620,22 +613,22 @@ footer > .logo {
     padding: 49px 45px 0 24px;
     z-index: 1;
 }
-.project-item:is(:hover, :focus) {
+.project__item:is(:hover, :focus) {
     cursor: pointer;
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
-.project-subtitles {
+.project__subtitles {
     padding: 20px 24px;
 }
-.project-title {
+.project__name {
     display: flex;
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
 }
-.project-description {
+.project__description {
     display: flex;
     font-size: 16px;
     font-weight: 400;

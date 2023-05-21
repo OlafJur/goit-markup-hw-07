@@ -1,0 +1,47 @@
+.client {
+    display: inline;
+    justify-content: center;
+
+    &__title {
+        @include h2style();
+    }
+}
+
+.clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    &__link {
+        @include transition();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 170px;
+        height: 92px;
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+
+        &:hover {
+            border-color: getColor(primary-color);
+        }
+        &:focus {
+            border-color: getColor(primary-color);
+        }
+        &:hover > .client__icon {
+            fill: getColor(primary-color);
+        }
+        &:focus > .client__icon {
+            fill: getColor(primary-color);
+        }
+    }
+    &__icon {
+        @include transition();
+        fill: getColor(scnd-font-color);
+        display: inline-flex;
+        width: 106px;
+        height: 60px;
+    }
+}

@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>goit-markup-hw-07</title>
         <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./sass/main.scss"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -26,13 +27,13 @@
             <div class="container page-header">
                 <nav class="nav">
                     <a href="index.html" class="logo"
-                        >Web<span class="studio--black">Studio</span></a
+                        >Web<span class="logo--black">Studio</span></a
                     >
                     <ul class="nav__menu">
                         <li>
                             <a
                                 href="index.html"
-                                class="nav__item nav--underline"
+                                class="nav__item nav__underline"
                             >
                                 Agencja
                             </a>
@@ -58,7 +59,7 @@
                     >
 
                     <a href="tel:+48111111111" class="contacts__link"
-                        ><svg class="contact__icon icon--smartphone">
+                        ><svg class="contact__icon contact__icon--smartphone">
                             <use
                                 href="./images/icons.svg#icon-smartphone"
                             ></use>
@@ -148,7 +149,7 @@
 
             <section class="section services">
                 <div class="container">
-                    <h2>Czym się zajmujemy</h2>
+                    <h2 class="sercvices__title">Czym się zajmujemy</h2>
                     <ul class="services__list">
                         <div class="services__item">
                             <li>
@@ -208,7 +209,7 @@
                                 <h3 class="member__name">John Doe</h3>
                                 <p class="member__job">Product Designer</p>
                             </div>
-                            <div class="social-media">
+                            <div class="social">
                                 <a href="#" class="social__link">
                                     <svg class="social__icon ">
                                         <use
@@ -411,7 +412,7 @@
                 <div class="page-footer">
                     <div>
                        <a href="index.html" class="logo"
-                      >Web<span class="studio--white">Studio</span></a>
+                      >Web<span class="logo--white">Studio</span></a>
                      <address class="address">
                         <p class="address__txt">
                             m. Warszawa, Aleje Jerozolimskie 21

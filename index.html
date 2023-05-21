@@ -196,7 +196,7 @@
 
             <section class="section team">
                 <div class="container">
-                    <h2>Nasz zespół</h2>
+                    <h2 class="team__title">Nasz zespół</h2>
                     <ul class="members">
                         <li class="member__card">
                             <img
@@ -251,7 +251,7 @@
                                 <h3 class="member__name">John Doe</h3>
                                 <p class="member__job">Frontend Developer</p>
                             </div>
-                            <div class="social-media">
+                            <div class="social">
                                 <a href="#" class="social__link">
                                     <svg class="social__icon">
                                         <use
@@ -293,7 +293,7 @@
                                 <h3 class="member__name">John Doe</h3>
                                 <p class="member__job">Marketing</p>
                             </div>
-                            <div class="social-media">
+                            <div class="social">
                                 <a href="#" class="social__link">
                                     <svg class="social__icon">
                                         <use
@@ -335,7 +335,7 @@
                                 <h3 class="member__name">John Doe</h3>
                                 <p class="member__job">UI Designer</p>
                             </div>
-                            <div class="social-media">
+                            <div class="social">
                                 <a href="#" class="social__link">
                                     <svg class="social__icon">
                                         <use
@@ -370,8 +370,8 @@
                 </div>
             </section>
             <section class="section">
-                <div class="container">
-                    <h2>Nasi klienci</h2>
+                <div class="container client">
+                    <h2 class="client__title">Nasi klienci</h2>
                     <div class="clients">
                         <a href="#" class="clients__link">
                             <svg class="client__icon">
@@ -481,82 +481,67 @@
         </footer>
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button type="button" class="close-btn" data-modal-close>
+                <button type="button" class="modal__close-btn" data-modal-close>
                     X
                 </button>
-                <p class="form-tite">Zostaw swoje dane w formularzu poniżej</p>
-                <div class="form-flexbox">
-                    <form class="modal-form">
-                        <div class="form">
-                          <p class="form-label">Imię</p>
-                            <label class="input">
-                                <svg class="icon-form">
-                                    <use
-                                        href="./images/icons.svg#icon-person"
-                                    ></use>
-                                </svg>
-                                <input
-                                    type="text"
-                                    name="username"
-                                    class="form-input"
-                                />
-                            </label>
-                             </div>
-                           <div class="form">
-                          <p class="form-label">Telefon</p>
-                            <label class="input">
-                                <svg class="icon-form">
-                                    <use
-                                        href="./images/icons.svg#icon-phone"
-                                    ></use>
-                                </svg>
-                                <input
-                                    type="tel"
-                                    name="phonenumber"
-                                    class="form-input"
-                                />
-                            </label>
-                             </div>
-                          <div class="form">
-                         <p class="form-label">Email</p>
-                            <label class="input">
-                                <svg class="icon-form">
-                                    <use
-                                        href="./images/icons.svg#icon-email"
-                                    ></use>
-                                </svg>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    class="form-input"
-                                />
-                            </label>
-                            </div>
-                             <div class="form-comment">
-                               <label class="form-label">Komentarz</label>
-                                 <div class="input-comment">
-                                     <textarea
-                                    type="text"
-                                    name="comment"
-                                    placeholder="Wprowadź tekst"
-                                     ></textarea>
-                                 </div>
-                            </div>
-                            </div>
-                         <div class="form-checkbox">
-                            <input class="checkbox" type="checkbox" name="acceptrules" id="acceptrules" />
-                            <label for="acceptrules" class="checkbox-flexbox">
-                                  <svg class="checkbox-icon">
-                                    <use href="./images/icons.svg#icon-checkbox"></use>
-                                  </svg>
-                              <span class="checkbox-label">Oświadczam, że akceptuję <span class="rule-accept">Regulamin</span> i <span class="rule-accept">Politykę Prywatności</span>.</span>
-                            </label>
-                         </div>
-                   <div class="form-button">
-                    <button type="submit" class="submit-btn">Wyślij</button>
-                </div>
-            </div>
-        </div>
+                <p class="modal__tite">Zostaw swoje dane w formularzu poniżej</p>
+                <div class="form">
+                    <form>
+                        <div class="form__box">
+                          <p class="form__label">Imię</p>
+                          <label class="form__input">
+                            <svg class="form__icon">
+                              <use href="./images/icons.svg#icon-person"></use>
+                            </svg>
+                            <input type="text" name="username" class="form__input-border" />
+                          </label>
+                        </div>
+                        <div class="form__box">
+                          <p class="form__label">Telefon</p>
+                          <label class="form__input">
+                            <svg class="form__icon">
+                              <use href="./images/icons.svg#icon-phone"></use>
+                            </svg>
+                            <input type="tel" name="phonenumber" class="form__input-border" />
+                          </label>
+                        </div>
+                        <div class="form__box">
+                          <p class="form__label">Email</p>
+                          <label class="form__input">
+                            <svg class="form__icon">
+                              <use href="./images/icons.svg#icon-email"></use>
+                            </svg>
+                            <input type="email" name="email" class="form__input-border" />
+                          </label>
+                        </div>
+                        <div>
+                          <label class="form__label">Komentarz</label>
+                          <div class="form__comment">
+                            <textarea
+                              type="text"
+                              name="comment"
+                              placeholder="Wprowadź tekst"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="acceptrules" id="acceptrules" />
+                          <label for="acceptrules" class="checkbox__box">
+                            <svg class="checkbox___icon">
+                              <use href="./images/icons.svg#icon-checkbox"></use>
+                            </svg>
+                            <span class="checkbox__label">
+                              Oświadczam, że akceptuję
+                              <span class="checkbox__rule-accept">Regulamin</span> i
+                              <span class="checkbox__rule-accept">Politykę Prywatności</span>.
+                            </span>
+                          </label>
+                        </div>
+                        <div class="submit">
+                          <button type="submit" class="submit__btn">Wyślij</button>
+                        </div>
+                      </form>
+                    </div>                     
         <script src="./js/modal.js"></script>
     </body>
 </html>

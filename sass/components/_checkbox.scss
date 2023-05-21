@@ -1,0 +1,81 @@
+$submit-margin-top: 30px;
+$checkbox-icon-width: 13px;
+$checkbox-icon-height: 14px;
+$submit-padding: 10px 76px;
+$submit-background-color: getColor(primary-color);
+$submit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$submit-border-radius: 4px;
+$checkbox-rule-accept-color: getColor(primary-color);
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    &__input {
+        display: none;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: $checkbox-icon-width;
+        height: $checkbox-icon-height;
+        fill: white;
+        border: 1px solid getColor(main-font-color);
+        border-radius: 2px;
+    }
+
+    &__box {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__input:checked + label .checkbox__icon {
+        background-color: getColor(primary-color);
+        border: none;
+        width: 15px;
+        height: 16px;
+    }
+
+    &__label {
+        display: inline-flex;
+        margin-left: 8px;
+        padding-top: 4px;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: getColor(scnd-font-color);
+        white-space: pre-wrap;
+    }
+
+    &__rule-accept {
+        color: $checkbox-rule-accept-color;
+        text-decoration: underline;
+
+        &:is(:hover, :focus) {
+            cursor: pointer;
+        }
+    }
+}
+
+.submit {
+    margin-top: $submit-margin-top;
+    display: flex;
+    justify-content: center;
+
+    &__btn {
+        padding: $submit-padding;
+        display: flex;
+        align-items: center;
+        font-family: 'Roboto';
+        letter-spacing: 0.06em;
+        font-size: 16px;
+        line-height: 1.88;
+        color: white;
+        background-color: $submit-background-color;
+        box-shadow: $submit-box-shadow;
+        border-radius: $submit-border-radius;
+        border: none;
+    }
+}

@@ -3,10 +3,6 @@ $fontSize: 14px;
 $lineHeight: 1.14;
 $letterSpacing: 0.02em;
 
-@mixin borderBottom() {
-    border-bottom: solid 4px #2196f3;
-}
-
 .header {
     border-bottom: 1px solid getColor(main-border);
     padding: 24px 0 25px;
@@ -23,13 +19,6 @@ $letterSpacing: 0.02em;
     align-items: center;
     gap: 93px;
 
-    &:hover {
-        color: getColor(primary-color);
-    }
-    &:focus {
-        color: getColor(primary-color);
-    }
-
     &__menu {
         display: flex;
         gap: 46px;
@@ -43,28 +32,31 @@ $letterSpacing: 0.02em;
         line-height: $lineHeight;
         letter-spacing: $letterSpacing;
 
-        &:hover::after {
-            @include borderBottom();
-            content: '';
-            display: inline-block;
-            align-items: center;
-            position: absolute;
-            left: 0%;
-            width: 100%;
-            margin-top: 45px;
-            position: absolute;
-            left: 0%;
+        &:is(:hover, :focus) {
+            color: getColor(primary-color);
         }
         &__underline {
             position: relative;
             color: getColor(primary-color);
 
             &::after {
-                @include borderBottom();
                 content: '';
+                @include borderBottom();
                 display: inline-block;
                 width: 100%;
                 left: 0;
+                margin-top: 47px;
+                position: absolute;
+            }
+
+            &:hover::after {
+                @include borderBottom();
+                content: '';
+                display: inline-block;
+                align-items: center;
+                position: absolute;
+                left: 0;
+                width: 100%;
                 margin-top: 47px;
                 position: absolute;
             }
@@ -78,13 +70,9 @@ $letterSpacing: 0.02em;
     justify-content: center;
     align-items: center;
 
-    &:hover {
+    &:is(:hover, :focus) {
         color: getColor(primary-color);
     }
-    &:focus {
-        color: getColor(primary-color);
-    }
-
     &__link {
         @extend .contacts;
         @include transition();
@@ -96,14 +84,14 @@ $letterSpacing: 0.02em;
         font-weight: $fontWeight;
         font-size: $fontSize;
         line-height: $lineHeight;
-    }
-    &__icon {
         display: flex;
-        width: 16px;
-        height: 14px;
+    }
+
+    &__icon {
+        @include contactIcon();
     }
     &__icon--smartphone {
-        width: 10px;
+        @include contactIcon();
         height: 16px;
     }
 }

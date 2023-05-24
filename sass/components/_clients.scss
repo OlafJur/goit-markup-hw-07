@@ -1,12 +1,3 @@
-.client {
-    display: inline;
-    justify-content: center;
-
-    &__title {
-        @include h2style();
-    }
-}
-
 .clients {
     display: flex;
     justify-content: center;
@@ -24,19 +15,17 @@
         border: 1px solid #afb1b8;
         border-radius: 4px;
 
-        &:hover {
+        &:is(:hover, focus) {
             border-color: getColor(primary-color);
         }
-        &:focus {
-            border-color: getColor(primary-color);
-        }
-        &:hover > .client__icon {
+        &:hover > .clients__icon {
             fill: getColor(primary-color);
         }
-        &:focus > .client__icon {
+        &:focus > .clients__icon {
             fill: getColor(primary-color);
         }
     }
+
     &__icon {
         @include transition();
         fill: getColor(scnd-font-color);

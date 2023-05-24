@@ -4,10 +4,6 @@ $lineHeight: 1.18;
 
 .team {
     background: getColor(scnd-background);
-
-    &__title {
-        @include h2style();
-    }
 }
 
 .members {

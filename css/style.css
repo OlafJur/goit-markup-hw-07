@@ -26,6 +26,7 @@ h2 {
     font-weight: 700;
     font-size: 36px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 /* UTILS */
@@ -53,11 +54,9 @@ h2 {
 .logo--black {
     color: black;
 }
-
 .logo--white {
     color: white;
 }
-
 /* UTILS */
 
 /* HEADER */
@@ -94,7 +93,7 @@ h2 {
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav__item :hover::after {
+.nav__item:hover::after {
     content: '';
     align-items: center;
     display: inline-block;
@@ -105,7 +104,7 @@ h2 {
     left: 0%;
     border-bottom: solid 4px #2196f3;
 }
-.nav--underline::after {
+.nav__underline::after {
     content: '';
     display: inline-block;
     width: 100%;
@@ -115,8 +114,8 @@ h2 {
     border-bottom: solid 4px #2196f3;
 }
 .nav__underline {
-    color: var(--primary-color);
     position: relative;
+    color: var(--primary-color);
 }
 .contacts {
     display: flex;
@@ -372,7 +371,7 @@ h2 {
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients__link:is(:hover, :focus) > .client__icon {
+.clients__link:is(:hover, :focus) > .clients__icon {
     fill: var(--primary-color);
 }
 .clients__link:is(:hover, :focus) {
@@ -419,6 +418,9 @@ footer > .logo {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress__link:is(:hover, :focus) {
     color: var(--primary-color);
@@ -562,7 +564,7 @@ footer > .logo {
     gap: 30px;
     flex-wrap: wrap;
 }
-.project__item {
+.projects__item {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--filter-border);
@@ -594,7 +596,7 @@ footer > .logo {
     transform: translateY(200%);
     transition: transform 500ms ease;
 }
-.project__item:is(:hover, :focus) .card__animation {
+.projects__item:is(:hover, :focus) .card__animation {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translatex(0);
@@ -612,22 +614,22 @@ footer > .logo {
     padding: 49px 45px 0 24px;
     z-index: 1;
 }
-.project__item:is(:hover, :focus) {
+.projects__item:is(:hover, :focus) {
     cursor: pointer;
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
-.project__subtitles {
+.projects__subtitles {
     padding: 20px 24px;
 }
-.project__name {
+.projects__name {
     display: flex;
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
 }
-.project__description {
+.projects__description {
     display: flex;
     font-size: 16px;
     font-weight: 400;
@@ -743,7 +745,7 @@ footer > .logo {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
-textarea {
+.textarea {
     border: none;
     padding: 12px 16px;
     width: 416px;
@@ -754,7 +756,7 @@ textarea {
     line-height: 1.16;
     letter-spacing: 0.01em;
 }
-::placeholder {
+.textarea::placeholder {
     font-family: 'Roboto';
     font-style: normal;
     color: rgba(117, 117, 117, 0.5);
@@ -831,3 +833,42 @@ textarea {
 }
 
 /* FORM */
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.checkbox__input {
+    display: none;
+}
+
+.checkbox__icon {
+    display: inline-block;
+    width: 13px;
+    height: 14px;
+    fill: white;
+    border: 1px solid getColor(main-font-color);
+    border-radius: 2px;
+}
+.checkbox__box {
+    display: inline-flex;
+    align-items: center;
+}
+.checkbox__input:checked + .checkbox__box .checkbox__icon {
+    background-color: #2196f3;
+    border: none;
+    width: 15px;
+    height: 16px;
+}
+
+.checkbox__label {
+    display: inline-flex;
+    margin-left: 8px;
+    padding-top: 4px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: getColor(scnd-font-color);
+    white-space: pre-wrap;
+}

@@ -1,6 +1,6 @@
 $fontSize: 14px;
 $fontWeight: 700;
-
+$letterSpacing: 0.03em;
 .article {
     display: flex;
     gap: 30px;
@@ -14,10 +14,11 @@ $fontWeight: 700;
         line-height: 1.14;
     }
     &__text {
-        display: flex;
-        letter-spacing: $letterSpacing;
+        font-family: 'Roboto';
+        font-style: normal;
         font-size: $fontSize;
-        line-height: 1.71;
+        line-height: 24px;
+        letter-spacing: $letterSpacing;
         color: getColor(scnd-font-color);
     }
     &__box {
